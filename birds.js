@@ -17,6 +17,7 @@
         Bird.cash = this.soldQuantity * this.price;
     }
     function addBird(event) {
+
         var Eagle = new Bird ("Eagle", '2','20');
         goods.push(Eagle);
         console.log("addBird ---> " + event);
