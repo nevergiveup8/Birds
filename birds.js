@@ -1,5 +1,5 @@
 
-    var kindOfGoods = [1,2,3];
+    var goods = [];
     function Bird (type, quantity, price){
         this.type = type;
         this.quantity = quantity;
@@ -7,24 +7,27 @@
         this.soldQuantity = 0;
         this.cash = 0;
 
-        this.addBird = function(quantity) {
-            this.quantity =+ quantity;
-        }
-        this.saleBird = function(quantity) {
-            this.quantity =- quantity;
-            this.soldQuantity =+ quantity;
-            this.cash = this.soldQuantity * this.price;
-        }
     }
-    function addBird(event)
-    {
+    function addBirds (Bird, quantity) {
+        Bird.quantity =+ quantity;
+    }
+    function saleBirds (Bird, quantity) {
+        Bird.quantity =- quantity;
+        Bird.soldQuantity =+ quantity;
+        Bird.cash = this.soldQuantity * this.price;
+    }
+    function addBird(event) {
+        var Eagle = new Bird ("Eagle", '2','20');
+        goods.push(Eagle);
         console.log("addBird ---> " + event);
         var table = document.getElementById("summary");
         var row = table.insertRow();
         var c_1 = row.insertCell(0);
-        c_1.innerHTML = 67;
+        c_1.innerHTML = goods[0].type;
         var c_2 = row.insertCell(1);
-        c_2.innerHTML = "Duck";
+        c_2.innerHTML = test.quantity;
+        var c_2 = row.insertCell(2);
+        c_2.innerHTML = test.price;
     }
 
 
