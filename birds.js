@@ -1,5 +1,5 @@
 
-    var kindOfGoods = [];
+    var kindOfGoods = [1,2,3];
     function Bird (type, quantity, price){
         this.type = type;
         this.quantity = quantity;
@@ -15,6 +15,16 @@
             this.soldQuantity =+ quantity;
             this.cash = this.soldQuantity * this.price;
         }
+    }
+    function addBird(event)
+    {
+        console.log("addBird ---> " + event);
+        var table = document.getElementById("summary");
+        var row = table.insertRow();
+        var c_1 = row.insertCell(0);
+        c_1.innerHTML = 67;
+        var c_2 = row.insertCell(1);
+        c_2.innerHTML = "Duck";
     }
 
 
